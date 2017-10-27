@@ -1,0 +1,2 @@
+# ProjetoGreeNetwork
+O GreeNetwork se trata de um Quiz que se comporta de dois modos: O modo clássico que é o modo tradicional de perguntas e resposta deduzindo a pontuação dos usuários em cima das respostas corretas; o outro modo é o de desafio que se difere do modo clássico somente com adicional de um cronometro que beneficia o usuário com uma pontuação em dobro caso o mesmo responda uma pergunta de forma correta em menos de trinta segundos, entretanto caso acerte uma questão com tempo superior a trinta segundos a pontuação será a mesma do modo clássico. 
