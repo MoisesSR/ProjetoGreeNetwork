@@ -1,4 +1,4 @@
-package com.greenetwork.greenetwork;
+package com.greenetwork.greenetwork.Activity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -15,11 +15,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.greenetwork.greenetwork.Classes.Usuarios;
 import com.greenetwork.greenetwork.DAO.ConfiguracaoFirebase;
+import com.greenetwork.greenetwork.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText edtEmail;
-    private EditText edtSenha;
+    private EditText editEmail;
+    private EditText editSenha;
     private Button btnLogar;
     private FirebaseAuth autenticacao;
     private Usuarios usuarios;
@@ -27,16 +28,16 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        edtEmail = (EditText) findViewById(R.id.editLogin);
-        edtSenha = (EditText) findViewById(R.id.editSenha);
+        editEmail = (EditText) findViewById(R.id.editLogin);
+        editSenha = (EditText) findViewById(R.id.editSenha);
         btnLogar = (Button) findViewById(R.id.btnEntrar);
         btnLogar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void  onClick (View v){
-                if (!edtEmail.getText().toString().equals("") && !edtSenha.getText().toString().equals("")){
+                if (!editEmail.getText().toString().equals("") && !editSenha.getText().toString().equals("")){
                     usuarios = new Usuarios();
-                    usuarios.setEmail(edtEmail.getText().toString());
-                    usuarios.setSenha(edtSenha.getText().toString());
+                    usuarios.setEmail(editEmail.getText().toString());
+                    usuarios.setSenha(editSenha.getText().toString());
                     ValidarLogin();
                 }
                 else{
@@ -64,6 +65,10 @@ public class LoginActivity extends AppCompatActivity {
     public void abrirTelaPrincinpal(){
         Intent intentAbrirPrincinpal = new Intent(LoginActivity.this, PrincinpalActivity.class);
         startActivity(intentAbrirPrincinpal);
+    }
+    public void onClickCadastrar(View Cadastrar ){
+        Intent intentCadastrar = new Intent(this, CadastroUsuarioActivity.class);
+        startActivity(intentCadastrar);
     }
 
 }

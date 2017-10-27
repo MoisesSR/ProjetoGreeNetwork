@@ -8,9 +8,9 @@ import android.util.Base64;
 
 public class Base64Custom {
     public static String codificarBase64(String texto){
-        return Base64.encodeToString(texto.getBytes(), Base64.DEFAULT).replace("(\\n|\\r)","");
+        return Base64.encodeToString(texto.getBytes(), Base64.DEFAULT).replaceAll("(\\n|\\r)","");
     }
-    public static String decodificarBase64(String textoCodificador){
-        return new String(Base64.decode(textoCodificador, Base64.DEFAULT));
+    public static String decodificarBase64(String textoCodificado){
+        return new String(Base64.decode(textoCodificado, Base64.DEFAULT));
     }
 }

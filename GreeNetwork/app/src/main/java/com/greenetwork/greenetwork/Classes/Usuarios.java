@@ -1,5 +1,12 @@
 package com.greenetwork.greenetwork.Classes;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
+import com.greenetwork.greenetwork.DAO.ConfiguracaoFirebase;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Win10Moises on 27/10/2017.
  */
@@ -59,6 +66,22 @@ public class Usuarios {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    public void Salvar(){
+        DatabaseReference referenciaFirebase = ConfiguracaoFirebase.getFibase();
+        referenciaFirebase.child("usuario").child(String.valueOf(getId())).setValue(this);
+    }
+    @Exclude
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> hashMapUsuario = new HashMap<>();
+        hashMapUsuario.put("id", getId());
+        hashMapUsuario.put("nome", getNome());
+        hashMapUsuario.put("Apelido", getApelido());
+        hashMapUsuario.put("Email", getEmail());
+        hashMapUsuario.put("Senha", getSenha());
+        return hashMapUsuario;
+    }
+
 
     public Usuarios() {
     }
