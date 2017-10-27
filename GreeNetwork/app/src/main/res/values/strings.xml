@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">GreeNetwork</string>
+    <string name="txtLogin">E-mail</string>
+    <string name="txtSenha">Senha</string>
+    <string name="txtEsqueceuSuaSehnha">Esqueceu sua senha?</string>
+    <string name="txtCadastrarOuEntra">Cadastre-se para Entrar</string>
+    <string name="txtEntrar">Entrar</string>
 </resources>
