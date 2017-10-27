@@ -33,7 +33,6 @@
         android:layout_marginTop="50dp"
         android:layout_below="@+id/editSenha"
         android:text="@string/txtEsqueceuSuaSehnha"
-
         android:textSize="20sp"
         android:textStyle="italic" />
 
@@ -45,7 +44,6 @@
         android:layout_alignRight="@id/editSenha"
         android:layout_marginTop="50dp"
         android:onClick="onClickEntrar"
-        android:textColor="#fff"
         android:text="@string/txtEntrar" />
 
     <TextView
