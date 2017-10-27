@@ -50,7 +50,10 @@ public class LoginActivity extends AppCompatActivity {
     }
     private void ValidarLogin(){
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-        autenticacao.signInWithEmailAndPassword(usuarios.getEmail(),usuarios.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        autenticacao.signInWithEmailAndPassword(
+                usuarios.getEmail(),
+                usuarios.getSenha()
+        ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
              if (task.isSuccessful()){

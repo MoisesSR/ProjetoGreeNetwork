@@ -38,7 +38,6 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_usuario);
-        Intent intent = getIntent();
         editEmail = (EditText) findViewById(R.id.editEmail);
         editSenha = (EditText) findViewById(R.id.edtSenha);
         editConfirmarSenha = (EditText) findViewById(R.id.editConfirmarSenha);
