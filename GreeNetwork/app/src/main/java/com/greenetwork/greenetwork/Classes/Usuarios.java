@@ -81,8 +81,6 @@ public class Usuarios {
         hashMapUsuario.put("Senha", getSenha());
         return hashMapUsuario;
     }
-
-
     public Usuarios() {
     }
 }

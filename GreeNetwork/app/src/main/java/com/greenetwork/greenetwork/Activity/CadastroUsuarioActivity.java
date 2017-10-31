@@ -33,11 +33,11 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
     private Usuarios usuarios;
     private Button bntGravar;
     private FirebaseAuth autenticacao;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_usuario);
+        Intent intent = getIntent();
         editEmail = (EditText) findViewById(R.id.editEmail);
         editSenha = (EditText) findViewById(R.id.edtSenha);
         editConfirmarSenha = (EditText) findViewById(R.id.editConfirmarSenha);
@@ -71,7 +71,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                 if (task.isSuccessful()){
                     Toast.makeText(CadastroUsuarioActivity.this,"Usuario Cadastrado com sucesso", Toast.LENGTH_LONG).show();
                     String identificadorUsuario = Base64Custom.codificarBase64(usuarios.getEmail());
-                    FirebaseUser usuarioFirebase = task.getResult().getUser();
+                    FirebaseUser firebaseUser = task.getResult().getUser();
                     usuarios.setId(identificadorUsuario);
                     usuarios.Salvar();
 
