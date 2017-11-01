@@ -4,5 +4,12 @@
     <string name="txtSenha">Senha</string>
     <string name="txtEsqueceuSuaSehnha">Esqueceu sua senha?</string>
     <string name="txtCadastrarOuEntra">Cadastre-se para Entrar</string>
+    <string name="txtApelido">Apelido</string>
+    <string name="txtNomeCompleto">Nome Completo</string>
+    <string name="txtConfimarSenha">Confime a Senha</string>
+    <string name="txtCpf">CPF</string>
+    <string name="bntCadastrar">Cadastrar</string>
+    <string name="bntCancelar">Cancelar</string>
+    <string name="txtEmail">Email</string>
     <string name="txtEntrar">Entrar</string>
 </resources>

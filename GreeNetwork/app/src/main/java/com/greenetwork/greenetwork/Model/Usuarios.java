@@ -1,4 +1,4 @@
-package com.greenetwork.greenetwork.Classes;
+package com.greenetwork.greenetwork.Model;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
